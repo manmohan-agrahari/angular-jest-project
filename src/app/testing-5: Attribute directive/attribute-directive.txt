@@ -1,0 +1,3 @@
+- An attribute directive modifies the behaviour of an element, component or another directive
+Example:-
+   <div HelloDirective  [userinfo]="username"></div>

@@ -4,8 +4,12 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
-    ]
+      "jest",
+      "node"
+    ],
+
+    "emitDecoratorMetadata": true  //because of this i have not included this one i.e. dependency injection were failing
+    //https://stackoverflow.com/questions/48085904/angular-dependency-injection-injectable-fails-in-test-while-inject-work
   },
   "files": [
     "src/test.ts",

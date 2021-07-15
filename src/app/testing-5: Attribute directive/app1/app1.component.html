@@ -1,0 +1,8 @@
+<p>Testing Attribute Directive</p>
+<input type="text"  placeholder="Enter the name" [(ngModel)]="username" /><br><br>
+<button type="submit"  (click)="submit()" >SHOW DIV</button>
+
+
+<div id="customDiv" *ngIf='isClicked' style="margin-top: 10px;" HelloDirective [userInfo]="username">
+hh
+</div>

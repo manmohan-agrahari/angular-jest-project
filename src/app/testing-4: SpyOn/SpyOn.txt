@@ -1,0 +1,16 @@
+SpyOn:
+-------
+- Spyon help us to mock the execution of the method/ functions.
+- It's a easy way to check whether a method is called or not. without leaving
+  subject under test.
+- We can chain spyon method to get dummy return value and using and.returnValue()
+- spyon can call original function using .and.callThrough()
+- spyOn can provide dummyImplementation using .and.callFake()
+
+
+
+SpyOn chaining methods
+-----------------------
+spyOn().and.returnValue()
+spyOn().and.callThrough()
+spyOn().and.callFake()

@@ -1,35 +1,22 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+describe("App Component",()=>{
+ let component:AppComponent;
+ let fixture:ComponentFixture<AppComponent>
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+ beforeEach(()=>{
+   TestBed.configureTestingModule( {
+     declarations:[AppComponent],
+     schemas:[CUSTOM_ELEMENTS_SCHEMA]
+   })
+   fixture=TestBed.createComponent(AppComponent);
+   component=fixture.componentInstance
+ })
 
-  it(`should have as title 'angular-jest-project'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-jest-project');
-  });
+ it('should initialised',()=>{
+    expect(component).toBeTruthy()
+ })
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-jest-project app is running!');
-  });
-});
+})
